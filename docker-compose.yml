@@ -16,3 +16,10 @@ services:
       - NODE_ENV=production
       - PORT=8005
       - MONGO_NAME=mongodb
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "80"
+    volumes:
+      - ./nginx:/usr/share/nginx/html
